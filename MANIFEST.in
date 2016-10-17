@@ -1,0 +1,5 @@
+include requirements.txt
+include test-requirements.txt
+include requirements-py3.txt
+include test-requirements-py3.txt
+
