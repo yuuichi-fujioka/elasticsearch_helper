@@ -6,7 +6,12 @@ class _Mapping(object):
     def non_analyzed(self, name):
         self._properties[name] = {
             "type": "string",
-            "index": "not_analyzed"
+            "fields": {
+                "raw": {
+                    "type": "string",
+                    "index": "not_analyzed"
+                }
+            }
         }
 
     def analyzed(self, name):
@@ -51,7 +56,8 @@ def make_index(es, name, doc_type, **name_type_map):
     es.indices.put_mapping(index=name, doc_type=doc_type, body={
         doc_type: {
             'properties': m._properties
-        }
+        },
+
     })
 
 
