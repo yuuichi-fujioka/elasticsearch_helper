@@ -17,6 +17,10 @@ setuptools.setup(
     author='Yuuichi Fujioka',
     author_email='fujioka.yuuichi@gmail.com',
     entry_points={
+        'console_scripts': [
+            "es_stream=elasticsearch_helper.cmd:stream",
+            "es_del_index=elasticsearch_helper.cmd:del_index",
+        ]
     },
     classifiers=[
         'Intended Audience :: Information Technology',
