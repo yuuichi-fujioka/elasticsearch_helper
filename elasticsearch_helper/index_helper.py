@@ -31,6 +31,11 @@ class _Mapping(object):
             "type": "float",
         }
 
+    def double(self, name):
+        self._properties[name] = {
+            "type": "double",
+        }
+
     def long(self, name):
         self._properties[name] = {
             "type": "long",

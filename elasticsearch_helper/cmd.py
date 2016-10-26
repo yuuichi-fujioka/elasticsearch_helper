@@ -22,6 +22,8 @@ class Mapping(object):
             return long(value)
         if self.type == 'float':
             return float(value)
+        if self.type == 'double':
+            return float(value)
         if self.type == 'date':
             return parser.parse(value)
         return value

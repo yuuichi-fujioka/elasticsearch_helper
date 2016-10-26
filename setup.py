@@ -11,7 +11,7 @@ with open('README.rst') as f:
 
 setuptools.setup(
     name='elasticsearch_helper',
-    version='0.1',
+    version='0.1.1',
     description=description,
     url='http://github.com/yuuichi-fujioka/setuptools_elasticsearch_helper.git',  # noqa
     author='Yuuichi Fujioka',
